@@ -1,0 +1,42 @@
+.button {
+    /* background-color: var(--gray-500); */
+    /* color: var(--blue-200); */
+
+    margin: 0.25rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+    
+    height: 4rem;
+    width: 4rem;
+    
+    border-radius: 1rem;
+    border: 0;
+}
+
+.primary {
+    background-color: var(--gray-500);
+    color: var(--blue-200);
+}
+
+.secondary {
+    background-color: var(--blue-500);
+    color: var(--blue-200);
+}
+.tertiary {
+    background-color: var(--gray-200);
+    color: var(--gray-100);
+}
+.fourth {
+    background-color: var(--blue-200);
+    color: var(--blue-100);
+}
+.higher {
+    position: relative;
+    height: 6rem;
+}
+.higher:first-of-type {
+    top: -1rem;
+}
+.wider {
+    width: 8.5rem;
+}
