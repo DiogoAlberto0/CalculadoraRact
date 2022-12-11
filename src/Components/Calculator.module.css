@@ -7,14 +7,17 @@
     border-radius: 25px;
     color: white;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 .display {
-    background-image: url(../assets/EuEEla.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-color: var(--gray-500);
 
-    height: 5rem;
+    min-height: 5rem;
+    width: 15rem;
     margin: 1rem 0px;
     border-radius: 25px;
     padding: 1rem;
@@ -23,9 +26,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
+
 }
+.display > p {
+    overflow-wrap: break-word;
+}
+
 .keyboard {
     position: relative;
+    /* width: 10vw; */
 }
 
 .group3 {

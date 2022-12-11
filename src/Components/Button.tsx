@@ -1,12 +1,16 @@
 import style from  './Button.module.css'
 
-type ButtonProps = {
-    content:string,
-    type:string,
+import backspaceIcon from '../assets/backspace.png'
+
+import { ButtonHTMLAttributes } from 'react'
+
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+    content: string,
+    variation:string,
     higher?: boolean,
     wider?: boolean
 }
-const Button = ( {content, type, higher, wider}:ButtonProps ) => {
+const Button = ( {content, variation, higher, wider, ...props }: ButtonProps ) => {
 
     const setType = (type:string) => {
         switch(type){
@@ -25,9 +29,20 @@ const Button = ( {content, type, higher, wider}:ButtonProps ) => {
         }
     }
 
+    const Teste = () => {
+        if(content == 'backSpace') {
+            return <img src={backspaceIcon} alt=""/>
+        } else {
+            return <p>{content}</p>
+        }
+    }
+
     return(
-        <button className={`${style.button} ${setType(type)} ${higher? style.higher: ''} ${wider? style.wider: ''}`}>
-            {content}
+        <button 
+            className={`${style.button} ${setType(variation)} ${higher? style.higher: ''} ${wider? style.wider: ''}`}
+            {...props}
+        >
+            <Teste/>
         </button>
     )
 }

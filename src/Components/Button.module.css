@@ -8,9 +8,15 @@
     
     height: 4rem;
     width: 4rem;
+
+    align-items: center;
+    justify-content: center;
     
     border-radius: 1rem;
     border: 0;
+}
+.button > img {
+    height: 1.25rem;
 }
 
 .primary {
